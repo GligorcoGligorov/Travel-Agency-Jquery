@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./jquery/jquery-ui.css">
+
+    <style>
+
+        body{
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            margin: auto;
+            background-image: url("img/people-gfcc73a9f6_1920.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            
+        }
+
+        #main-hi{
+            width: 40%;
+            height: 20%;
+            margin-left: 5%;
+        }
+        #hi{
+            
+            padding: 20px;
+            background-color: rgb(255, 255, 255,0.3);
+            box-shadow: 2px 2px black;
+            border: 1px solid black;
+            transition: 500ms;
+            
+        }
+        #hi h1{
+            font-size: 40px;
+            text-align: center;
+            text-shadow: 2px 3px 6px black;
+        }
+        #hi-btn{
+            display: flex;
+            justify-content: center;
+        }
+        #btn-start{
+            font-size: 25px;
+            width: 30%;
+            box-shadow: 2px 2px black;
+
+        }
+
+        #vocation-list .v-list img{
+            width: 300px;
+            height: 200px;
+            background-size: 100%;
+        }
+        #place-1{
+            position: relative;
+        }
+       
+        #vocation-list{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .v-list{
+            display: flex;
+            flex-direction: row;
+            margin-top: 5%;
+
+        }
+        .main{
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            display: none;
+            
+        }
+        #place-1,#place-2,#place-3,#place-4,#place-5,#place-6{
+            position: relative;
+            transition: 1s;
+            
+        }
+        #place1-h1,#place2-h1,#place3-h1,#place4-h1,#place5-h1,#place6-h1{
+            position: absolute;
+            top: 0%;
+            right: 10%;
+           
+        }
+        #place-2,#place-4,#place-6{
+            margin-left: 7%;
+        }
+        .vocation-img img{
+            width:100%;
+            height:100%;
+            background-size: cover;
+            object-fit: cover;
+            box-shadow: 2px 3px 10px black;
+        }
+        .places-h1{
+            text-shadow: 1px 2px 4px black;
+        }
+
+        .place-text{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 300px;
+            padding: 5px 40px;
+            background: rgb(249, 249, 249,0.5);
+            margin-top: 20px;
+            box-shadow: 2px 2px black;
+            border: 1px solid black;
+        }
+        
+        .place-text div h1{
+            color: green;
+        }
+
+        .buttons{
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            display: none;
+        }
+
+        .buttons button{
+            font-size: 20px;
+            margin-left: 10px;
+            border-radius: 10px;
+            padding: 10px;
+            transition: 1s;
+
+        }
+    
+        
+        .display{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            display: none;
+
+            
+        }
+        .display-div1 img{
+            width: 600px;
+            height: 300px;
+            box-shadow: 1px 1px 4px black;
+            border: 1px solid black; 
+
+        }
+        .display-div1 {
+            position: relative;
+
+        }
+        .display-div1 h1{
+            position: absolute;
+            top: 0%;
+            right: 10%;
+            text-shadow: 1px 2px 4px black;
+            font-size: 40px;
+            letter-spacing: 2px;
+
+        }
+        .btnBook{
+            margin: 5px 0px;
+            font-size: 12px;
+            border-radius: 10px;
+            transition: 1s;
+            padding: 10px 5px;
+            font-weight: bolder;
+            background: rgb(254, 169, 9,0.6);
+        }
+        #btnList{
+            margin-top: 10px;
+        }
+        
+    
+    </style>
+</head>
+<body>
+    
+    <div id="main-hi">
+        <div id="hi">
+            <h1>Welcome to Travel Agency - Gis</h1>
+            <div id="hi-btn">
+                <button id="btn-start">Start</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="main">
+
+        <div id="vocation-list">
+            
+            <div id="v-list1" class="v-list">
+                <div id="place-1" title="1" class="places">
+                    <div class="vocation-img">
+                        <img src="./img/zakunthos.jpg" alt="">
+                    </div>
+                    <div id="place1-h1" class="places-h1">
+                        <h1>Zakynthos</h1>
+                    </div>
+                </div>
+
+                <div id="place-2" title="2" class="places">
+                    <div class="vocation-img">
+                        <img src="./img/budva.jpg" alt="">
+                    </div>
+                    <div id="place2-h1" class="places-h1">
+                        <h1>Budva</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div id="v-list2" class="v-list">
+                <div id="place-3" title="3" class="places">
+                    <div class="vocation-img">
+                        <img src="./img/maldivi.jpg" alt="">
+                    </div>
+                    <div id="place3-h1" class="places-h1">
+                        <h1>Maldives</h1>
+                    </div>
+                </div>
+                <div id="place-4" title="4" class="places">
+                    <div class="vocation-img">
+                        <img src="./img/hawaii.jpg" alt="">
+                    </div>
+                    <div id="place4-h1" class="places-h1">
+                        <h1>Hawaii</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div id="v-list3" class="v-list">
+                <div id="place-5" title="5" class="places">
+                    <div class="vocation-img">
+                        <img src="./img/123378-Bermuda.jpg" alt="">
+                    </div>
+                    <div id="place1-h1" class="places-h1">
+                        <h1>Bermuda</h1>
+                    </div>
+                </div>
+                <div id="place-6" title="6" class="places">
+                    <div class="vocation-img">
+                        <img src="./img/sanDiego.jpg" alt="">
+                    </div>
+                    <div id="place6-h1" class="places-h1">
+                        <h1>San Diego</h1>
+                    </div>
+                </div>
+            </div>
+        
+            <div id="place1" class="display">
+                <div class="display-div1">
+                    <img src="./img/zakunthos.jpg" alt="">
+                    <h1>Zakynthos</h1>
+                </div>
+                <div class="place-text">
+                    <div>
+                        <h1>$400</h1>
+                        <button class="btnBook">BOOK NOW</button>
+
+                    </div>
+                    <div>
+                        <p>Departure: 20.07.2022 <br>
+                            Return: 27.07.2022 <br>
+                            Destination: Zakynthos <br>
+                            Transport: Bus <br>
+                            Accommodation: Villa <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="place2" class="display">
+                <div class="display-div1">
+                    <img src="./img/budva.jpg" alt="">
+                    <h1>Budva</h1>
+
+                </div>
+                <div class="place-text">
+
+                    <div>
+                        <h1>$530</h1>
+                        <button class="btnBook">BOOK NOW</button>
+
+                    </div>
+                    <div >
+                        <p>Departure: 20.07.2022 <br>
+                            Return: 27.07.2022 <br>
+                            Destination: Budva <br>
+                            Transport: Bus <br>
+                            Accommodation: Villa <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="place3" class="display">
+                <div class="display-div1">
+                    <img src="./img/maldivi.jpg" alt="">
+                    <h1>Maldives</h1>
+
+                </div>
+                <div class="place-text">
+                    <div>
+                        <h1>$1400</h1>
+                        <button class="btnBook">BOOK NOW</button>
+
+                    </div>
+                    <div>
+                        <p>Departure: 20.07.2022 <br>
+                            Return: 27.07.2022 <br>
+                            Destination: Maldives <br>
+                            Transport: Airplane <br>
+                            Accommodation: Villa <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="place4" class="display">
+                <div class="display-div1">
+                    <img src="./img/hawaii.jpg" alt="">
+                    <h1>Hawaii</h1>
+
+                </div>
+                <div class="place-text">
+                    <div>
+                        <h1>$1500</h1>
+                        <button class="btnBook">BOOK NOW</button>
+
+                    </div>
+                    <div>
+                        <p>Departure: 20.07.2022 <br>
+                            Return: 27.07.2022 <br>
+                            Destination: Hawaii <br>
+                            Transport: Airplane <br>
+                        Accommodation: Villa <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="place5" class="display">
+                <div class="display-div1">
+                    <img src="./img/123378-Bermuda.jpg" alt="">
+                    <h1>Bermuda</h1>
+
+                </div>
+                <div class="place-text">
+
+                    <div>
+                        <h1>$800</h1>
+                        <button class="btnBook">BOOK NOW</button>
+
+                    </div>
+                    <div>
+                        <p>Departure: 20.07.2022 <br>
+                            Return: 27.07.2022 <br>
+                            Destination: Bermuda <br>
+                            Transport: Airplane <br>
+                            Accommodation: Villa <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="place6" class="display">
+                <div class="display-div1">
+                    <img src="./img/sanDiego.jpg" alt="">
+                    <h1>San Diego</h1>
+                </div>
+
+                <div class="place-text">
+                    <div>
+                        <h1>$1000</h1>
+                        <button class="btnBook">BOOK NOW</button>
+                    </div>
+                    <div>
+                        <p>Departure: 20.07.2022 <br>
+                            Return: 27.07.2022 <br>
+                            Destination: San Diego <br>
+                            Transport: Airplane <br>
+                            Accommodation: Villa <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="buttons">
+                
+                    <button id="btnLeft">LEFT</button>
+                    <button id="btnBack">BACK</button>
+                    <button id="btnRight">RIGHT</button>
+                    <br><br>
+                    <button id="btnList">VIEW LIST</button>
+            </div>
+
+            <div id="dialog">
+                <h3>Name and Surname:</h3>
+                <input type="text" id="ime">
+                
+            </div>
+
+            <div id="dialog2">
+                <ul id="list">
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="./jquery/jquery.js"></script>
+<script src="./jquery/jquery-ui.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
