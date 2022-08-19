@@ -1,0 +1,246 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin: auto;
+    background-image: url("img/people-gfcc73a9f6_1920.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+
+}
+
+#main-hi {
+    width: 40%;
+    height: 20%;
+    margin-left: 5%;
+}
+
+#hi {
+
+    padding: 20px;
+    background-color: rgb(255, 255, 255, 0.3);
+    box-shadow: 2px 2px black;
+    border: 1px solid black;
+    transition: 500ms;
+
+}
+
+#hi h1 {
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 2px 3px 6px black;
+}
+
+#hi-btn {
+    display: flex;
+    justify-content: center;
+}
+
+#btn-start {
+    font-size: 25px;
+    width: 30%;
+    box-shadow: 2px 2px black;
+
+}
+
+#vocation-list .v-list img {
+    width: 300px;
+    height: 200px;
+    background-size: 100%;
+}
+
+#place-1 {
+    position: relative;
+}
+
+#vocation-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.v-list {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+
+}
+
+.main {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    display: none;
+
+}
+
+#place-1,
+#place-2,
+#place-3,
+#place-4,
+#place-5,
+#place-6 {
+    position: relative;
+    transition: 1s;
+
+}
+
+#place1-h1,
+#place2-h1,
+#place3-h1,
+#place4-h1,
+#place5-h1,
+#place6-h1 {
+    position: absolute;
+    top: 0%;
+    right: 10%;
+
+}
+
+#place-2,
+#place-4,
+#place-6 {
+    margin-left: 7%;
+}
+
+.vocation-img img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    object-fit: cover;
+    box-shadow: 2px 3px 10px black;
+}
+
+.places-h1 {
+    text-shadow: 1px 2px 4px black;
+}
+
+.place-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    padding: 5px 40px;
+    background: rgb(249, 249, 249, 0.5);
+    margin-top: 20px;
+    box-shadow: 2px 2px black;
+    border: 1px solid black;
+}
+
+.place-text div h1 {
+    color: green;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    display: none;
+}
+
+.buttons button {
+    font-size: 20px;
+    margin-left: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    transition: 1s;
+
+}
+
+
+.display {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+
+
+}
+
+.display-div1 img {
+    width: 600px;
+    height: 300px;
+    box-shadow: 1px 1px 4px black;
+    border: 1px solid black;
+
+}
+
+.display-div1 {
+    position: relative;
+
+}
+
+.display-div1 h1 {
+    position: absolute;
+    top: 0%;
+    right: 10%;
+    text-shadow: 1px 2px 4px black;
+    font-size: 40px;
+    letter-spacing: 2px;
+
+}
+
+.btnBook {
+    margin: 5px 0px;
+    font-size: 12px;
+    border-radius: 10px;
+    transition: 1s;
+    padding: 10px 5px;
+    font-weight: bolder;
+    background: rgb(254, 169, 9, 0.6);
+}
+
+#btnList {
+    margin-top: 10px;
+}
+
+@media (max-width: 700px) {
+    #hi h1 {
+        font-size: 20px;
+    }
+
+    #main-hi {
+        width: 100%;
+        margin: 0px 5px;
+    }
+
+    .main {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        display: none;
+    }
+
+    #vocation-list .v-list img {
+        width: 200px;
+        height: 150px;
+        background-size: 100%;
+    }
+
+    /* .vocation-img img {
+        width: 50%;
+        height: 50%;
+        background-size: cover;
+        object-fit: cover;
+        box-shadow: 2px 3px 10px black;
+    } */
+}
+
+@media (max-width: 1240px){
+    #vocation-list .v-list img {
+            width: 200px;
+            height: 150px;
+            background-size: 100%;
+        }
+}
